@@ -7,6 +7,8 @@ using System.Runtime.Serialization.Formatters.Binary;
 using ClassLibrary;
 using System.IO;
 using System.Xml.Serialization;
+using System.Runtime.Serialization.Json;
+using System.Runtime.Serialization;
 
 namespace lab8
 {
@@ -29,19 +31,22 @@ namespace lab8
             // BinaryFormatter formatter = new BinaryFormatter();
 
             //создаем объект XmlSerilizer
-            XmlSerializer formatter = new XmlSerializer(typeof(Delivery));
+           // XmlSerializer formatter = new XmlSerializer(typeof(Delivery));
+
+            //создаем объект JSON 
+            DataContractJsonSerializer formatter = new DataContractJsonSerializer(typeof(Delivery));
             // получаем поток, куда будем записывать сериализованный объект
-            using (FileStream fs = new FileStream("delivery.xml", FileMode.OpenOrCreate))
+            using (FileStream fs = new FileStream("delivery.json", FileMode.OpenOrCreate))
             {
-                formatter.Serialize(fs, delivery);
+                formatter.WriteObject(fs, delivery);
 
                 Console.WriteLine("Объект сериализован");
             }
 
-            // десериализация из файла delivery.xml
-            using (FileStream fs = new FileStream("delivery.xml", FileMode.OpenOrCreate))
+            // десериализация из файла delivery.json
+            using (FileStream fs = new FileStream("delivery.json", FileMode.OpenOrCreate))
             {
-                Delivery newDelivery = (Delivery)formatter.Deserialize(fs);
+                Delivery newDelivery = (Delivery)formatter.ReadObject(fs);
 
                 Console.WriteLine("Объект десериализован");
                 Console.WriteLine("\n Код выдачи: {0}\n Дата выдачи: {1}\n", newDelivery.ID_Delivery, newDelivery.Data);

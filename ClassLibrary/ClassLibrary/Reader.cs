@@ -5,26 +5,37 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Xml.Serialization;
+using System.Runtime.Serialization.Json;
+using System.Runtime.Serialization;
+using System.IO;
 
 namespace ClassLibrary
 {
-    [Serializable]
+    //[Serializable]
+    [DataContract]
     public class Reader : Home
     {
+        [DataMember]
         public int ID_Reader
         { get; set; }
+        [DataMember]
         public string Surname
         { get; set; }
+        [DataMember]
         public string Name
         { get; set; }
+        [DataMember]
         public string Patronymic
         { get; set; }
+        [DataMember]
         public string Gender
         { get; set; }
+        [DataMember]
         public int Phone
         { get; set; }
+        /*[DataMember]
         public Reader()
-        { }
+        { }*/
         public Reader(int ID_Reader, string Surname, string Name, string Patronymic, string Gender, int Phone, string City, string Street, string home1): base(City, Street, home1)
         {
             this.ID_Reader = ID_Reader;

@@ -5,23 +5,31 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Xml.Serialization;
+using System.Runtime.Serialization.Json;
+using System.Runtime.Serialization;
+using System.IO;
 
 namespace ClassLibrary
 {
-    [Serializable]
+   // [Serializable]
+    [DataContract]
     public class Exemplar
     {
+        [DataMember]
         public int ID_Exemplar
         { get; set; }
+        [DataMember]
         public Book Book1
         { get; set; }
+        [DataMember]
         public DateTime Data
         { get; set; }
+        [DataMember]
         public string Publisher
         { get; set; }
 
-        public Exemplar()
-        { }
+       /* public Exemplar()
+        { }*/
         public Exemplar(int ID_Exemplar, Book Book1, DateTime Data, string Publisher)
         {
             this.ID_Exemplar = ID_Exemplar;

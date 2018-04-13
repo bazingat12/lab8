@@ -4,28 +4,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 //using System.Runtime.Serialization.Formatters.Binary;
-using System.Xml.Serialization;
+//using System.Xml.Serialization;
+using System.Runtime.Serialization.Json;
+using System.Runtime.Serialization;
+using System.IO;
 
 
 namespace ClassLibrary
 {
-    [Serializable]
+    // [Serializable]
+    [DataContract]
     public class Delivery : IbooksReader
     {
+        [DataMember]
         public int ID_Delivery
         { get; set; }
+        [DataMember]
         public DateTime Data
         { get; set; }
+        [DataMember]
         public Employee EmployeeDelivery
         { get; set; }
+        [DataMember]
         public Reader Reader1
         { get; set; }
+        [DataMember]
         public Exemplar Exemplar1
         { get; set; }
 
-        // стандартный конструктор без параметров
+        /*// стандартный конструктор без параметров
         public Delivery()
-        { }
+        { }*/
         public Delivery(int ID_Delivery, DateTime Data, Employee EmployeeDelivery, Reader Reader1, Exemplar Exemplar1)
         {
             this.ID_Delivery = ID_Delivery;

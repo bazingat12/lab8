@@ -5,18 +5,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Xml.Serialization;
+using System.Runtime.Serialization.Json;
+using System.Runtime.Serialization;
+using System.IO;
 
 namespace ClassLibrary
 {
-    [Serializable]
+    //[Serializable]
+    [DataContract]
     public class DateDelivery : Delivery
     {
+        [DataMember]
         public DateTime StartOfDelivery
         { get; set; }
+        [DataMember]
         public DateTime EndOfDelivery
         { get; set; }
+
+        /*[DataMember]
         public DateDelivery()
-        { }
+        { }*/
+
         public DateDelivery(int ID_Delivery, DateTime Data, Employee EmployeeDelivery, Reader Reader1, Exemplar Exemplar1, DateTime StartofDelivery, DateTime EndofDelivery) :
             base(ID_Delivery, Data, EmployeeDelivery, Reader1, Exemplar1)
         {

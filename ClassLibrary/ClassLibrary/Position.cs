@@ -5,19 +5,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Xml.Serialization;
+using System.Runtime.Serialization.Json;
+using System.Runtime.Serialization;
+using System.IO;
 
 namespace ClassLibrary
 {
-    [Serializable]
+    //[Serializable]
+    [DataContract]
     public class Position
     {
-       public int ID_Position
+        [DataMember]
+        public int ID_Position
         { get; set; }
+        [DataMember]
         public string PositionName
         { get; set; }
 
-        public Position()
-        { }
+       /* public Position()
+        { }*/
         public Position(int ID_Position, string PositionName)
         {
             this.ID_Position = ID_Position;
