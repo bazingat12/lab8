@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Xml.Serialization;
 
 namespace ClassLibrary
 {
@@ -14,6 +15,8 @@ namespace ClassLibrary
         { get; set; }
         public DateTime EndOfDelivery
         { get; set; }
+        public DateDelivery()
+        { }
         public DateDelivery(int ID_Delivery, DateTime Data, Employee EmployeeDelivery, Reader Reader1, Exemplar Exemplar1, DateTime StartofDelivery, DateTime EndofDelivery) :
             base(ID_Delivery, Data, EmployeeDelivery, Reader1, Exemplar1)
         {

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Xml.Serialization;
 
 namespace ClassLibrary
 {
@@ -18,6 +19,9 @@ namespace ClassLibrary
         { get; set; }
         public string Publisher
         { get; set; }
+
+        public Exemplar()
+        { }
         public Exemplar(int ID_Exemplar, Book Book1, DateTime Data, string Publisher)
         {
             this.ID_Exemplar = ID_Exemplar;

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Runtime.Serialization.Formatters.Binary;
 using ClassLibrary;
 using System.IO;
+using System.Xml.Serialization;
 
 namespace lab8
 {
@@ -24,19 +25,21 @@ namespace lab8
             DateTime end = new DateTime(2019, 12, 31);
 
             Console.WriteLine("Объект создан");
-
             // создаем объект BinaryFormatter
-            BinaryFormatter formatter = new BinaryFormatter();
+            // BinaryFormatter formatter = new BinaryFormatter();
+
+            //создаем объект XmlSerilizer
+            XmlSerializer formatter = new XmlSerializer(typeof(Delivery));
             // получаем поток, куда будем записывать сериализованный объект
-            using (FileStream fs = new FileStream("delivery.dat", FileMode.OpenOrCreate))
+            using (FileStream fs = new FileStream("delivery.xml", FileMode.OpenOrCreate))
             {
                 formatter.Serialize(fs, delivery);
 
                 Console.WriteLine("Объект сериализован");
             }
 
-            // десериализация из файла people.dat
-            using (FileStream fs = new FileStream("delivery.dat", FileMode.OpenOrCreate))
+            // десериализация из файла delivery.xml
+            using (FileStream fs = new FileStream("delivery.xml", FileMode.OpenOrCreate))
             {
                 Delivery newDelivery = (Delivery)formatter.Deserialize(fs);
 

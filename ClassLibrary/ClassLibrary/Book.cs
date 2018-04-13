@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Xml.Serialization;
 
 namespace ClassLibrary
 {
@@ -18,6 +19,8 @@ namespace ClassLibrary
         { get; set; }
         public string Genre
         { get; set; }
+        public Book()
+        { }
 
         public Book(int ID_Book, string Author, string NameBook, String Genre)
         {

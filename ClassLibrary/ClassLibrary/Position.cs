@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Xml.Serialization;
 
 namespace ClassLibrary
 {
@@ -14,6 +15,9 @@ namespace ClassLibrary
         { get; set; }
         public string PositionName
         { get; set; }
+
+        public Position()
+        { }
         public Position(int ID_Position, string PositionName)
         {
             this.ID_Position = ID_Position;

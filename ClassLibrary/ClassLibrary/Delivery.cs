@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Runtime.Serialization.Formatters.Binary;
+//using System.Runtime.Serialization.Formatters.Binary;
+using System.Xml.Serialization;
 
 
 namespace ClassLibrary
@@ -21,6 +22,10 @@ namespace ClassLibrary
         { get; set; }
         public Exemplar Exemplar1
         { get; set; }
+
+        // стандартный конструктор без параметров
+        public Delivery()
+        { }
         public Delivery(int ID_Delivery, DateTime Data, Employee EmployeeDelivery, Reader Reader1, Exemplar Exemplar1)
         {
             this.ID_Delivery = ID_Delivery;

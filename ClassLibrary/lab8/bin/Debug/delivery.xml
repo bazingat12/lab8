@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<Delivery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID_Delivery>1</ID_Delivery>
+  <Data>2018-04-13T15:16:24.0813585+03:00</Data>
+  <EmployeeDelivery>
+    <city>Киров</city>
+    <street>Попова</street>
+    <home>6</home>
+    <ID_Employee>1</ID_Employee>
+    <EmployeePosition>
+      <ID_Position>1</ID_Position>
+      <PositionName>Библиотекарь</PositionName>
+    </EmployeePosition>
+    <Surname>Петрова</Surname>
+    <Name>Людмила</Name>
+    <Patronymic>Сергеевна</Patronymic>
+    <INN>345678892</INN>
+    <Experience>4</Experience>
+  </EmployeeDelivery>
+  <Reader1>
+    <city>Киров</city>
+    <street>Лепсе</street>
+    <home>43</home>
+    <ID_Reader>1</ID_Reader>
+    <Surname>Семенов</Surname>
+    <Name>Игорь</Name>
+    <Patronymic>Евгеньевич</Patronymic>
+    <Gender>муж.</Gender>
+    <Phone>79835</Phone>
+  </Reader1>
+  <Exemplar1>
+    <ID_Exemplar>1</ID_Exemplar>
+    <Book1>
+      <ID_Book>1</ID_Book>
+      <Author>Пушкин</Author>
+      <NameBook>Руслан и Людмила</NameBook>
+      <Genre>Поэма</Genre>
+    </Book1>
+    <Data>2018-04-13T15:16:24.0793583+03:00</Data>
+    <Publisher>Exmo</Publisher>
+  </Exemplar1>
+</Delivery>

@@ -17,6 +17,8 @@ namespace ClassLibrary
         public string city { get; set; }
         public string street { get; set; }
         public string home { get; set; }
+        public Home()
+        { }
 
 
         public Home(string City, string Street, string home1)

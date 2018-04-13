@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Xml.Serialization;
 
 namespace ClassLibrary
 {
@@ -24,6 +25,9 @@ namespace ClassLibrary
         { get; set; }
         public byte Experience
         { get; set; }
+        public Employee()
+        { }
+
 
         public Employee (int ID_Employee, Position EmployeePosition, string Surname, string Name, string Patronymic, int INN, byte Experience, string City, string Street, string home1): base (City, Street, home1)
         {

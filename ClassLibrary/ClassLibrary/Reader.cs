@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Xml.Serialization;
 
 namespace ClassLibrary
 {
@@ -22,6 +23,8 @@ namespace ClassLibrary
         { get; set; }
         public int Phone
         { get; set; }
+        public Reader()
+        { }
         public Reader(int ID_Reader, string Surname, string Name, string Patronymic, string Gender, int Phone, string City, string Street, string home1): base(City, Street, home1)
         {
             this.ID_Reader = ID_Reader;
