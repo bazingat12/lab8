@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace ClassLibrary
 {
+    [Serializable]
     public class Employee : Home 
     {
         public int ID_Employee
@@ -37,7 +39,7 @@ namespace ClassLibrary
         {
             Console.WriteLine("Сотрудник: ");
             Console.WriteLine("    Код сотрудника: {0}\n    Фамилия: {1}\n    Имя: {2}\n    Отчество: "
-                + "{3}\n    ИНН: {4}\n    Стаж работы: {5}\n    Город: {6}\n    Улица: {7}\n    Дом: {8}\n",
+                + "{3}\n    ИНН: {4}\n    Стаж работы: {5}\n    Город: {6}\n    Улица: {7}\n    Дом: {8}",
                 ID_Employee, Surname, Name, Patronymic, INN, Experience, city, street, home);
                EmployeePosition.Info();
         }

@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization.Formatters.Binary;
+
 
 namespace ClassLibrary
 {
+    [Serializable]
     public class Delivery : IbooksReader
     {
         public int ID_Delivery
@@ -29,7 +32,7 @@ namespace ClassLibrary
 
         public virtual void Info()
         {
-            Console.WriteLine("Код выдачи: {0} , Дата:\n", ID_Delivery, Data);
+           // Console.WriteLine("Код выдачи: {0} , Дата:\n", ID_Delivery, Data);
             EmployeeDelivery.Info();
             Reader1.Info();
             Exemplar1.Info();
