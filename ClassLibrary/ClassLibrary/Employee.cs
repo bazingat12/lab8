@@ -12,6 +12,7 @@ using System.Runtime.Serialization.Json;
 namespace ClassLibrary
 {
     [Serializable]
+    [KnownType(typeof(Employee))]
     [DataContract]
 
     public class Employee
@@ -37,6 +38,8 @@ namespace ClassLibrary
         [DataMember]
         public byte Experience
         { get; set; }
+        public Employee()
+        { }
 
         public Employee(int ID_Employee, Position EmployeePosition, string Surname, string Name, string Patronymic, int INN, byte Experience, string City, string Street, string home1)
         {

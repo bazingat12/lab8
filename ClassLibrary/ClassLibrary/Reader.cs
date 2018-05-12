@@ -12,6 +12,7 @@ using System.Runtime.Serialization.Json;
 namespace ClassLibrary
 {
     [Serializable]
+    [KnownType(typeof(Reader))]
     [DataContract]
 
     public abstract class Reader : IReader
@@ -37,6 +38,8 @@ namespace ClassLibrary
         [DataMember]
         public virtual double st
         { get; set; }
+        public Reader()
+        { }
         public Reader(int ID_Reader, string Surname, string Name, string Patronymic, string Gender, int Phone)
         {
             this.ID_Reader = ID_Reader;

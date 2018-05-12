@@ -12,6 +12,7 @@ using System.Runtime.Serialization.Json;
 namespace ClassLibrary
 {
     [Serializable]
+    [KnownType(typeof(Book))]
     [DataContract]
 
     public class Book
@@ -28,6 +29,8 @@ namespace ClassLibrary
         [DataMember]
         public string Genre
         { get; set; }
+        public Book()
+        { }
 
         public Book(int ID_Book, string Author, string NameBook, String Genre)
         {

@@ -1,0 +1,8 @@
+F:\labs\lab8\ClassLibrary\lab8(XML)\bin\Debug\lab8(XML).exe.config
+F:\labs\lab8\ClassLibrary\lab8(XML)\bin\Debug\lab8(XML).exe
+F:\labs\lab8\ClassLibrary\lab8(XML)\bin\Debug\lab8(XML).pdb
+F:\labs\lab8\ClassLibrary\lab8(XML)\bin\Debug\ClassLibrary.dll
+F:\labs\lab8\ClassLibrary\lab8(XML)\bin\Debug\ClassLibrary.pdb
+F:\labs\lab8\ClassLibrary\lab8(XML)\obj\Debug\lab8(XML).csprojResolveAssemblyReference.cache
+F:\labs\lab8\ClassLibrary\lab8(XML)\obj\Debug\lab8(XML).exe
+F:\labs\lab8\ClassLibrary\lab8(XML)\obj\Debug\lab8(XML).pdb

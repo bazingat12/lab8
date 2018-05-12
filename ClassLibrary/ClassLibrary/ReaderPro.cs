@@ -12,13 +12,16 @@ using System.Runtime.Serialization.Json;
 namespace ClassLibrary
 {
     [Serializable]
+    [KnownType(typeof(ReaderPro))]
     [DataContract]
 
     public class ReaderPro : Reader
     {
         [DataMember]
-        public string status { get; set; }
+        public string status { get; set;}
 
+        public ReaderPro()
+        { }
         public ReaderPro(string status, int ID_Reader, string Surname, string Name, string Patronymic, string Gender, int Phone)  : base (ID_Reader, Surname, Name, Patronymic, Gender, Phone)
         {
             this.status = status;

@@ -12,6 +12,7 @@ using System.Runtime.Serialization.Json;
 namespace ClassLibrary
 {
     [Serializable]
+    [KnownType(typeof(DateDelivery))]
     [DataContract]
 
     public class DateDelivery : Delivery
@@ -22,6 +23,8 @@ namespace ClassLibrary
         [DataMember]
         public DateTime EndOfDelivery
         { get; set; }
+        public DateDelivery()
+        { }
         public DateDelivery(int ID_Delivery, DateTime Data, Employee EmployeeDelivery, Reader Reader1, Exemplar Exemplar1, DateTime StartofDelivery, DateTime EndofDelivery) :
             base(ID_Delivery, Data, EmployeeDelivery, Reader1, Exemplar1)
         {

@@ -11,6 +11,7 @@ using System.Runtime.Serialization.Json;
 namespace ClassLibrary
 {
     [Serializable]
+    [KnownType(typeof(Position))]
     [DataContract]
 
     public class Position
@@ -21,6 +22,8 @@ namespace ClassLibrary
         [DataMember]
         public string PositionName
         { get; set; }
+        public Position()
+        { }
         public Position(int ID_Position, string PositionName)
         {
             this.ID_Position = ID_Position;

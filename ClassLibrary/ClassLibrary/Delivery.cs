@@ -12,6 +12,7 @@ using System.Runtime.Serialization.Json;
 namespace ClassLibrary
 {
     [Serializable]
+    [KnownType(typeof(Delivery))]
     [DataContract]
 
     public class Delivery
@@ -31,6 +32,8 @@ namespace ClassLibrary
         [DataMember]
         public Exemplar Exemplar1
         { get; set; }
+        public Delivery()
+        { }
         public Delivery(int ID_Delivery, DateTime Data, Employee EmployeeDelivery, IReader Reader1, Exemplar Exemplar1)
         {
             this.ID_Delivery = ID_Delivery;
