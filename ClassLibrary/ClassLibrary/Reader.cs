@@ -4,16 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Xml.Serialization;
-using System.Runtime.Serialization.Json;
 using System.Runtime.Serialization;
 using System.IO;
+using System.Xml.Serialization;
+using System.Runtime.Serialization.Json;
 
 namespace ClassLibrary
 {
-    //[Serializable]
+    [Serializable]
     [DataContract]
-    public class Reader : Home
+
+    public abstract class Reader : IReader
     {
         [DataMember]
         public int ID_Reader
@@ -33,10 +34,10 @@ namespace ClassLibrary
         [DataMember]
         public int Phone
         { get; set; }
-        /*[DataMember]
-        public Reader()
-        { }*/
-        public Reader(int ID_Reader, string Surname, string Name, string Patronymic, string Gender, int Phone, string City, string Street, string home1): base(City, Street, home1)
+        [DataMember]
+        public virtual double st
+        { get; set; }
+        public Reader(int ID_Reader, string Surname, string Name, string Patronymic, string Gender, int Phone)
         {
             this.ID_Reader = ID_Reader;
             this.Surname = Surname;
@@ -48,8 +49,8 @@ namespace ClassLibrary
         public virtual void Info()
         {
             Console.WriteLine("Информация о читателе: ");
-            Console.WriteLine("    Код Читателя: {0}\n    Фамилия: {1}\n    Имя: {2} \n    Отчество: {3}\n    Пол: {4}\n    Телефон: {5}\n    Город: {6}\n    Улица: {7}\n    Дом: {8}\n",
-                ID_Reader, Surname, Name, Patronymic, Gender, Phone, city, street, home);
+            Console.WriteLine("    Код Читателя: {0}\n    Фамилия: {1}\n    Имя: {2} \n    Отчество: {3}\n    Пол: {4}\n    Телефон: {5}\n    Штраф: {6}%\n",
+                ID_Reader, Surname, Name, Patronymic, Gender, Phone, st * 100);
         }
     }
 }

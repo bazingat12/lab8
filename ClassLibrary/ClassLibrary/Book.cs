@@ -4,15 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Xml.Serialization;
-using System.Runtime.Serialization.Json;
 using System.Runtime.Serialization;
 using System.IO;
+using System.Xml.Serialization;
+using System.Runtime.Serialization.Json;
 
 namespace ClassLibrary
 {
-   // [Serializable]
+    [Serializable]
     [DataContract]
+
     public class Book
     {
         [DataMember]
@@ -27,10 +28,6 @@ namespace ClassLibrary
         [DataMember]
         public string Genre
         { get; set; }
-
-      /*  [DataMember]
-        public Book()
-        { }*/
 
         public Book(int ID_Book, string Author, string NameBook, String Genre)
         {

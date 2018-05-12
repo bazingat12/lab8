@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.Serialization;
 using ClassLibrary;
 using System.IO;
-using System.Xml.Serialization;
-using System.Runtime.Serialization.Json;
-using System.Runtime.Serialization;
 
 namespace lab8
 {
@@ -16,58 +14,52 @@ namespace lab8
     {
         static void Main(string[] args)
         {
-            // объект для сериализации
             Book Book = new Book(1, "Пушкин", "Руслан и Людмила", "Поэма");
             Exemplar exemplar = new Exemplar(1, Book, DateTime.Now, "Exmo");
             Position position = new Position(1, "Библиотекарь");
-            Reader reader = new Reader(1, "Семенов", "Игорь", "Евгеньевич", "муж.", 79835, "Киров", "Лепсе", "43");
+            IReader reader = new ReaderPro("вип", 1, "Семенов", "Игорь", "Евгеньевич", "муж.", 79835);
             Employee employee = new Employee(1, position, "Петрова", "Людмила", "Сергеевна", 345678892, 4, "Киров", "Попова", "6");
-            Delivery delivery = new Delivery(1, DateTime.Now, employee, reader, exemplar);
+            Delivery delivery = new Delivery(1, new DateTime(2018, 05, 04), employee, reader, exemplar);
+
+
+            IReader reader2 = new ReaderSimple("обычный", 1, "Крючкова", "Антонина", "Александровна", "жен.", 79835);
+            Book Book1 = new Book(1, "Лермонтов", "Мцыри", "Поэма");
+            Exemplar exemplar1 = new Exemplar(1, Book, DateTime.Now, "Exmo");
+            Position position1 = new Position(1, "Библиотекарь");
+            Delivery delivery1 = new Delivery(2, new DateTime(2018, 05, 10), employee, reader2, exemplar1);
+
             DateTime start = new DateTime(2018, 05, 6);
             DateTime end = new DateTime(2019, 12, 31);
 
-            Console.WriteLine("Объект создан");
-            // создаем объект BinaryFormatter
-            // BinaryFormatter formatter = new BinaryFormatter();
+            List<Delivery> ListDelivery = new List<Delivery>();
+            ListDelivery.Add(delivery);
+            ListDelivery.Add(delivery1);
 
-            //создаем объект XmlSerilizer
-           // XmlSerializer formatter = new XmlSerializer(typeof(Delivery));
+            // массив для сериализации:
+            Delivery[] DeliveryBook = new Delivery[] { delivery, delivery1 };
 
-            //создаем объект JSON 
-            DataContractJsonSerializer formatter = new DataContractJsonSerializer(typeof(Delivery));
-            // получаем поток, куда будем записывать сериализованный объект
-            using (FileStream fs = new FileStream("delivery.json", FileMode.OpenOrCreate))
+            BinaryFormatter formatter = new BinaryFormatter();
+
+            using (FileStream fs = new FileStream("delivery.dat", FileMode.OpenOrCreate))
             {
-                formatter.WriteObject(fs, delivery);
+                // сериализуем весь массив tovar
+                formatter.Serialize(fs, DeliveryBook);
 
-                Console.WriteLine("Объект сериализован");
+                Console.WriteLine("Сериализация в поток байтов прошла успешно");
             }
 
-            // десериализация из файла delivery.json
-            using (FileStream fs = new FileStream("delivery.json", FileMode.OpenOrCreate))
+            // десериализация
+            using (FileStream fs = new FileStream("delivery.dat", FileMode.OpenOrCreate))
             {
-                Delivery newDelivery = (Delivery)formatter.ReadObject(fs);
+                Delivery[] deserilizeTovar = (Delivery[])formatter.Deserialize(fs);
 
-                Console.WriteLine("Объект десериализован");
-                Console.WriteLine("\n Код выдачи: {0}\n Дата выдачи: {1}\n", newDelivery.ID_Delivery, newDelivery.Data);
-                newDelivery.Info();
-            }
-
-            Console.ReadLine();
-
-          /*  List<DateDelivery> ListDelivery = new List<DateDelivery>();
-            ListDelivery.Add(new DateDelivery(1, DateTime.Now, employee, reader, exemplar, start, end));
-            foreach (DateDelivery date in ListDelivery)
-            {
-                date.Info();
-                if (date is IbooksReader)
+                foreach (Delivery tv in deserilizeTovar)
                 {
-                    (date as IbooksReader).Count("3");
+                    tv.Info();
                 }
-                Console.WriteLine();
-            }
-            Console.ReadLine();*/
 
+                Console.ReadLine();
+            }
         }
     }
 }
