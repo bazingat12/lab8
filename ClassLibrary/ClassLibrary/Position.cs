@@ -4,14 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization.Formatters.Binary;
-
+using System.Runtime.Serialization;
+using System.IO;
+using System.Xml.Serialization;
+using System.Runtime.Serialization.Json;
 namespace ClassLibrary
 {
     [Serializable]
+    [DataContract]
+
     public class Position
     {
-       public int ID_Position
+        [DataMember]
+        public int ID_Position
         { get; set; }
+        [DataMember]
         public string PositionName
         { get; set; }
         public Position(int ID_Position, string PositionName)

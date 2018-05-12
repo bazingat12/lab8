@@ -4,14 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.Serialization;
+using System.IO;
+using System.Xml.Serialization;
+using System.Runtime.Serialization.Json;
 
 namespace ClassLibrary
 {
     [Serializable]
+    [DataContract]
+
     public class DateDelivery : Delivery
     {
+        [DataMember]
         public DateTime StartOfDelivery
         { get; set; }
+        [DataMember]
         public DateTime EndOfDelivery
         { get; set; }
         public DateDelivery(int ID_Delivery, DateTime Data, Employee EmployeeDelivery, Reader Reader1, Exemplar Exemplar1, DateTime StartofDelivery, DateTime EndofDelivery) :
