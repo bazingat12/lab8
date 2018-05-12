@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab8", "lab8\lab8.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab8(XML)", "lab8(XML)\lab8(XML).csproj", "{4533BDB1-B9D5-4CDF-B079-0731E0B1E589}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab8(JOIN)", "lab8(JOIN)\lab8(JOIN).csproj", "{0C86E7AD-4CFE-4106-ABCF-78D78F48925F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{4533BDB1-B9D5-4CDF-B079-0731E0B1E589}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4533BDB1-B9D5-4CDF-B079-0731E0B1E589}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4533BDB1-B9D5-4CDF-B079-0731E0B1E589}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C86E7AD-4CFE-4106-ABCF-78D78F48925F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C86E7AD-4CFE-4106-ABCF-78D78F48925F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C86E7AD-4CFE-4106-ABCF-78D78F48925F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C86E7AD-4CFE-4106-ABCF-78D78F48925F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

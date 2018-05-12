@@ -63,8 +63,6 @@ namespace lab8_XML_
                 foreach (Reader tv in ListDeserTovar)
                 {
                     tv.Info();
-                   // Console.WriteLine("Товар: {0} ; Цена: {1}", tv.ID, tv.Price);
-
                 }
             }
             Console.ReadLine();

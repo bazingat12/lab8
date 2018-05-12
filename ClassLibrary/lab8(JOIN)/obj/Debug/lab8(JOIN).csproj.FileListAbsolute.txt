@@ -1,0 +1,8 @@
+F:\labs\lab8\ClassLibrary\lab8(JOIN)\bin\Debug\lab8(JOIN).exe.config
+F:\labs\lab8\ClassLibrary\lab8(JOIN)\bin\Debug\lab8(JOIN).exe
+F:\labs\lab8\ClassLibrary\lab8(JOIN)\bin\Debug\lab8(JOIN).pdb
+F:\labs\lab8\ClassLibrary\lab8(JOIN)\bin\Debug\ClassLibrary.dll
+F:\labs\lab8\ClassLibrary\lab8(JOIN)\bin\Debug\ClassLibrary.pdb
+F:\labs\lab8\ClassLibrary\lab8(JOIN)\obj\Debug\lab8(JOIN).csprojResolveAssemblyReference.cache
+F:\labs\lab8\ClassLibrary\lab8(JOIN)\obj\Debug\lab8(JOIN).exe
+F:\labs\lab8\ClassLibrary\lab8(JOIN)\obj\Debug\lab8(JOIN).pdb
