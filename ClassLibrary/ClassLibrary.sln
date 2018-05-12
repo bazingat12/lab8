@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab8", "lab8\lab8.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab8(XML)", "lab8(XML)\lab8(XML).csproj", "{4533BDB1-B9D5-4CDF-B079-0731E0B1E589}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab8(JOIN)", "lab8(JOIN)\lab8(JOIN).csproj", "{0C86E7AD-4CFE-4106-ABCF-78D78F48925F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab8(JSON)", "lab8(JOIN)\lab8(JSON).csproj", "{0C86E7AD-4CFE-4106-ABCF-78D78F48925F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
