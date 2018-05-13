@@ -1,8 +1,0 @@
-F:\labs\lab8\ClassLibrary\lab8\bin\Debug\lab8.exe.config
-F:\labs\lab8\ClassLibrary\lab8\bin\Debug\lab8.exe
-F:\labs\lab8\ClassLibrary\lab8\bin\Debug\lab8.pdb
-F:\labs\lab8\ClassLibrary\lab8\bin\Debug\ClassLibrary.dll
-F:\labs\lab8\ClassLibrary\lab8\bin\Debug\ClassLibrary.pdb
-F:\labs\lab8\ClassLibrary\lab8\obj\Debug\lab8.csprojResolveAssemblyReference.cache
-F:\labs\lab8\ClassLibrary\lab8\obj\Debug\lab8.exe
-F:\labs\lab8\ClassLibrary\lab8\obj\Debug\lab8.pdb

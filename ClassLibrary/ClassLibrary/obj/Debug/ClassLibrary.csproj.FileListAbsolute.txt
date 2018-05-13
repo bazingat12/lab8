@@ -1,5 +1,0 @@
-F:\labs\lab8\ClassLibrary\ClassLibrary\obj\Debug\ClassLibrary.csprojResolveAssemblyReference.cache
-F:\labs\lab8\ClassLibrary\ClassLibrary\bin\Debug\ClassLibrary.dll
-F:\labs\lab8\ClassLibrary\ClassLibrary\bin\Debug\ClassLibrary.pdb
-F:\labs\lab8\ClassLibrary\ClassLibrary\obj\Debug\ClassLibrary.dll
-F:\labs\lab8\ClassLibrary\ClassLibrary\obj\Debug\ClassLibrary.pdb
