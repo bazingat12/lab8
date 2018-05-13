@@ -8,7 +8,7 @@ using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Json;
 
-namespace lab8_JOIN_
+namespace lab8_JSON_
 {
     class Program
     {
